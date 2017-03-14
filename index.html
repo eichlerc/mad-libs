@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mad Libs</title>
+  </head>
+  <body ng-app="myApp" ng-controller="myController">
+
+<h1>Mad Libs for Adults</h1>
+    <input type="text" ng-model="noun" placeholder="noun">
+    <input type="text" ng-model="adjective" placeholder="adjective">
+    <input type="text" ng-model="verb" placeholder="verb">
+    <input type="text" ng-model="food" placeholder="food">
+    <p>The {{adjective}} {{noun}} loves to {{verb}} {{food}}.</p>
+
+<h1>Mad Libs for Kids</h1>
+<!-- <button type="button" name ="button">Submit</button> -->
+<p> {{noun || "__"}} is not very {{adjective || "__"}}</p>
+
+
+<script src="https://code.angularjs.org/1.6.2/angular.js"></script>
+<script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+<script src = "script.js"></script>
+<script src = "factory.js"></script>  </body>
+</html>
