@@ -1,23 +1,12 @@
-var app = angular.module('myApp',['ngRoute']);
+var app = angular.module('myApp',['ngAnimate']);
 
-
-app.config(function($routeProvider, $locationProvider){
-
-  $routeProvider
-    .when('/sayhello',{
-      controller: 'myController',
-      templateUrl: '???.html'
-    })
-    .when('/saygoodbye', {
-      controller: 'secondController',
-      templateUrl: '???.html'
-
-    });
-
-    $locationProvider.hashPrefix('')
-
-});
+.controller('myController', function($scope){
+  $scope.words = [
+    {word:'yourName', placeholder:'first name'}
+    {word:'animal', placeholder:'animal'}
+    {word:'foodDish', placeholder:'fooddish'}
+  ]
 
 
 
-});
+})

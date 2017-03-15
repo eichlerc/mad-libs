@@ -3,23 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Mad Libs</title>
+    <script src="style.css"></script>
+
   </head>
   <body ng-app="myApp" ng-controller="myController">
-
-<h1>Mad Libs for Adults</h1>
-    <input type="text" ng-model="noun" placeholder="noun">
-    <input type="text" ng-model="adjective" placeholder="adjective">
-    <input type="text" ng-model="verb" placeholder="verb">
-    <input type="text" ng-model="food" placeholder="food">
-    <p>The {{adjective}} {{noun}} loves to {{verb}} {{food}}.</p>
-
-<h1>Mad Libs for Kids</h1>
-<!-- <button type="button" name ="button">Submit</button> -->
-<p> {{noun || "__"}} is not very {{adjective || "__"}}</p>
+    <div>
+    <form class="interaction" ng-controller="LibsCtrl" ng-submit='submitted=true; submit();' name="myForm">
+			<!-- Form Inputs -->
+			<div ng-hide="formInputs">
+				<h2 ng-view class="view-animation">Provide the following words:</h2>
+				<div class="info">
+					<input type="text" placeholder="Your name"         ng-model="data.yourName"           name="yourName" 					required="">
+          <input type="text" placeholder="Animal"         ng-model="data.animal"           name="animal" 					required="">
+          <input type="text" placeholder="Food Dish"         ng-model="data.foodDish"           name="foodDish" 					required="">
+      <button class="btn-generate" type="submit">Generate My Mad Lib</button>
+      </div>
 
 
 <script src="https://code.angularjs.org/1.6.2/angular.js"></script>
 <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
 <script src = "script.js"></script>
-<script src = "factory.js"></script>  </body>
+</body>
 </html>
