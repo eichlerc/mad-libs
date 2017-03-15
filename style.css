@@ -1,5 +1,13 @@
-div {
-  background-color: white;
+body {
+  background-image: url("house.jpg");
+}
+
+h2 {
+  color: magenta;
+}
+
+.page-container {
+  background-color: pink;
   padding: 30px;
   width: 30%;
   margin: 0 auto;

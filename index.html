@@ -3,26 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Mad Libs</title>
-    <script src="style.css"></script>
+    <link src="style.css"></link>
 
   </head>
   <body ng-app="myApp" ng-controller="myController">
-    <div>
-    <form class="interaction" ng-controller="LibsCtrl" ng-submit='submitted=true; submit();' name="myForm">
+    <div class="page-container">
+    <form class="interaction"  ng-submit='submitted=true; submit();' name="myForm">
 			<!-- Form Inputs -->
 			<div ng-hide="formInputs">
-				<h2 ng-view class="view-animation">Provide the following words:</h2>
+				<h2>Mad Libs gone Madder</h2>
 				<div class="info">
 					<input type="text" placeholder="Your name"         ng-model="data.yourName"           name="yourName" 					required="">
           <input type="text" placeholder="Animal"         ng-model="data.animal"           name="animal" 					required="">
           <input type="text" placeholder="Food Dish"         ng-model="data.foodDish"           name="foodDish" 					required="">
+          <input type="text" placeholder="verb"         ng-model="data.verb"           name="verb" 					required="">
+          <input type="text" placeholder="color"         ng-model="data.color"           name="color" 					required="">
+          <input type="text" placeholder="object"         ng-model="data.object"           name="object" 					required="">
+          <input type="text" placeholder="place"         ng-model="data.place"           name="place" 					required="">
       <button class="btn-generate" type="submit">Generate My Mad Lib</button>
       </div>
 
 
 <script src="https://code.angularjs.org/1.6.2/angular.js"></script>
 <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+<!-- <script src="https://code.angularjs.org/1.6.2/angular-animate.js"></script> -->
 
 <script src = "script.js"></script>
 </body>
